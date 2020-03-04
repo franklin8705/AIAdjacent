@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Adventure Works marketing team loves the insights they've been getting from the Bike Buyer predictive model.  They love it so much, they'd like to apply it more broadly and use it from other systems.  Since the current model can only be used by Power BI, you've been asked to help Adventure Works recreate the model for use outside of Power BI.  For our first step into this process lets use the Azure Machine Learning Studio Designer.  In subsequent labs we will imporve on this even more and learn new tools to rapidly implement ML Models.
+Adventure Works marketing team loves the insights they've been getting from the Bike Buyer predictive model.  They love it so much, they'd like to apply it more broadly and use it from other systems.  Since the current model can only be used by Power BI, you've been asked to help Adventure Works recreate the model for use outside of Power BI.  For our first step into this process lets use the Azure Machine Learning Studio Designer.  In subsequent labs we will improve on this even more and learn new tools to rapidly implement ML Models.
 
 ## Success Criteria
 1.  A published BikeBuyer model endpoint hosted in Azure ML
@@ -15,30 +15,30 @@ Adventure Works marketing team loves the insights they've been getting from the 
 
 ## Basic Hackflow
 1. Create an Azure Machine Learning Workspace in your Azure Subscription (Ensure it is "Enterprise")
-1. Go to "https://ml.azure.com" to launch the new "Studio" experince, ensure you are in the right "workspace"
+1. Go to <a href=https://ml.azure.com target="_blank">ML Studio"</a> to launch the new "Studio" experience, ensure you are in the right "workspace"
 1. Create a "Dataset" from a new "Datastore" by connecting it to the SQLServer in earlier labs and running 
    1. Use "Select * from BikeBuyerTraining"
-2. Create a new "Designer" Training Pipeline
+1. Create a new "Designer" Training Pipeline
    1. Add in the dataset
    2. Add "Edit Metadata" and create categorical features
    3. Add "Split Data"
-   4. Add "Two Class Logistic Regression" 
+   4. Add "Two Class Logistic Regression".
    5. Add "Train Model"
    6. Add "Score Model"
    7. Add "Evaluate Model"
    8. Run the trained model
       1. Create Training Compute
-3. Examine Model and output of each "Pill"
-4. Create "Inferencing Pipeline"
-5. "Publish" to Endpoint
+1. Examine Model and output of each "Pill"
+1. Create "Inferencing Pipeline"
+1. "Publish" to Endpoint
    1. Create AKS Cluster
-6. Examine in "Endpoints"
-7. Use the Swagger api to create Postman calls
+1. Examine in "Endpoints"
+1. Use the Swagger api to create Postman calls
    1. Use "Import from Link"
-8. Test Postman calls for service health
-9. Test Postman calls for inference output
-10. Add into Power BI dataflow 
-   1.  "AI Insights" 
+1. Test Postman calls for service health
+1. Test Postman calls for inference output
+1. Add into Power BI dataflow 
+   1. Use "AI Insights" to find your model
 
 
 ## Hints
@@ -56,8 +56,9 @@ Adventure Works marketing team loves the insights they've been getting from the 
 |                                            |                                                                                                                                                       |
 | ------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
 | **Description**                            |                                                                       **Links**                                                                       |
-| Train a Model Azure Machine Learning Designer                   |        <https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-designer-automobile-price-train-score>         |
-| Azure Machine Learning integration in Power BI | 
-<https://docs.microsoft.com/en-us/power-bi/service-machine-learning-integration> |
+| Azure Machine Learning Main Docs | <https://docs.microsoft.com/en-us/azure/machine-learning/> |
+| Tutorial: Predict automobile price with the designer (preview) | <https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-designer-automobile-price-train-score> |
+
+
 
 [Next challenge (Building Machine Learning Models in Azure Machine Learning AutoML) >](./06-AMLAutoML.md)
